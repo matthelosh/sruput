@@ -1,0 +1,25 @@
+<div class="container-fluid" style="background: white; color: #333">
+    <h3 class="page-header">Dudi Saya</h3>
+    <div class="col-sm-4 col-sm-offset-4">
+            <input type="text" class="form-control col-sm-4" name="namaGuru" ng-model="guru.$" placeholder="Masukkan Nama Anda!">
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="container">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>No</th><th>Nama Dudi</th><th>Alamat</th>
+                    </tr>
+                </thead>
+                <tbody ng-repeat="dudi in dudis | filter:guru |  limitTo: 10">
+                    <tr>
+                        <td>{{$index +1}}</td><td>{{dudi.namaDudi}}</td><td>{{dudi.alamat}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</div>

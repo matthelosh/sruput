@@ -1,0 +1,57 @@
+@font-face {
+    font-family: Satisfy;
+    src: url('../fonts/Satisfy-Regular.ttf')
+}
+@font-face {
+    font-family: Pacifico;
+    src: url('../fonts/Pacifico-Regular.ttf')
+}
+body{
+ padding-top: 50px!important;   
+}
+    .content{
+    content: '';
+    width: 100vw;
+    min-height: 100vh;
+    background: url('../img/back.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #efefef;
+    box-sizing: border-box;
+    position: relative;
+    /* z-index: 1; */
+}
+.content h1{
+    margin: 0!important;
+}
+.navbar-brand a,
+.navbar-brand a:hover{
+    text-decoration: none!important;
+    color: orangered;
+}
+nav.navbar{
+    margin: 0!important;
+    border-radius: 0!important;
+}
+.btn{
+    border-radius: 1px!important;
+}
+
+.ng-scope{
+    /* min-height: 100vh!important; */
+    box-sizing: border-box;
+    overflow-x: hidden;
+    position: relative;
+}
+/* @-webkit-keyframes goright{
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0)
+    }
+}
+.salam{
+   -webkit-animation: goright 5s linear;
+} */
+

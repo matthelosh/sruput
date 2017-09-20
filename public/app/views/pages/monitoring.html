@@ -1,0 +1,134 @@
+<div class="row-fluid menu hidden-print">
+    <div class="container">
+        <div class="form-group col-sm-2">
+            <br>
+            <input type="text"ng-model="guru" ng-change="cariGuru(guru)" class="form-control" placeholder="Masukkan nama guru pembimbing!">
+        </div>
+        <div class="form-group col-sm-4">
+            <br>
+            <input type="text" ng-model="dudi" ng-change="cariDudi(dudi)" class="cariDudi form-control  center-block" id="cariDudi" placeholder="Cari Nama Dudi" ng-disabled="cekGuru">
+            
+        </div>
+        <div class="form-group col-sm-1">
+            <br>
+            <button class="btn btn-danger" onclick="window.print();">Cetak</button>
+        </div>
+    </div>
+</div>
+<div class="printMonitor container">
+    <div class="row headRow">
+        <div class="col-sm-1 logo text-center" >
+            <img src="assets/img/jatim.jpg" alt="Logo Jatim" class="img headLogo block-center" width=75px style="margin: auto">
+        </div>
+        <div class="col-sm-10 headContent text-center">
+            <h5>PEMERINTAH PROVINSI JAWA TIMUR</h5>
+            <h5>DINAS PENDIDIKAN</h5>
+            <h5><strong>SEKOLAH MENENGAH KEJURUAN NEGERI 10 MALANG</strong></h5>
+            <P>Jl. Raya Tlogowaru Telp. (0341) 754086 Fax. (0341) 754087</P>
+            <p>http://smkn10-mlg.sch.id    E-mail: smkn10_malang@yahoo.co.id</p>
+            <div class="col-sm-6">MALANG</div>
+            <div class="col-sm-6">Kode Pos 65133</div>
+        </div>
+    </div>
+    <div class="row metaRow ">
+        <h3 class="text-center">BERITA ACARA MONITORING PRAKERLAP ANGKATAN X TAHAP I</h3>
+        <div class="col-sm-3">
+            <p class="meta-label">NAMA GURU PRAKERLAP</p>
+            <p class="meta-label">NAMA PERUSAHAAN (DU/DI)</p>
+            <p class="meta-label">JUMLAH PRAKTIKAN</p>
+        </div>
+        <div class="col-sm-3">
+            <p>: {{ namaGuru }}</p>
+            <p>: {{ this.namaDudi }}</p>
+            <p>: {{ total }}</p>
+        </div>
+        <div class="col-sm-3">
+            <p class="meta-label">KOMPETENSI KEAHLIAN</p>
+            <p class="meta-label">HARI/TANGGAL MONITORING</p>
+            <p class="meta-label">MONITORING KE</p>
+        </div>
+        <div class="col-sm-3">
+            <p>: {{ this.progli | uppercase }}</p>
+            <p>: {{ this.tanggal }}</p>
+            <p>: II (DUA)</p>
+        </div>
+    </div>
+    
+    <div class="row contentRow">
+        <div class="table-responsive">
+            <table class="table table-bordered table-monitoring">
+                <thead>
+                    <tr>
+                        <td rowspan="2">No</td>
+                        <td rowspan="2">Nama Praktikan</td>
+                        <td colspan="3">Kehadiran</td>
+                        <td rowspan="2">Permasalahan</td>
+                        <td rowspan="2">Penyelesaian Permasalahan</td>
+                    </tr>
+                    <tr>
+                        <td>S</td>
+                        <td>I</td>
+                        <td>A</td>
+                    </tr>
+                </thead>
+                
+                <tbody ng-repeat="data in bam">
+                    <tr>
+                        <td rowspan="3">{{$index+1}}</td>
+                        <td rowspan="3">{{data.namaPeserta}}</td>
+                        <td rowspan="3"></td>
+                        <td rowspan="3"></td>
+                        <td rowspan="3"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row sign">
+        <div class="col-sm-3 text-center">
+            <p>KETUA PRAKERLAP</p>
+            <br>
+            <br>
+            <br>
+            <p><strong><u>LUKI EMILIYA HIDAYAT, M.Pd</u></strong></p>
+            <p>NIP. 19790219 200903 2 003</p>
+        </div>
+        <div class="col-sm-3 text-center">
+            <p>KAPROGLI</p>
+            <br>
+            <br>
+            <br>
+            <p><strong><u>Nanang Wahyudianto, S.Kom</u></strong></p>
+            <p>NIP.</p>
+        </div>
+        <div class="col-sm-3 text-center">
+            <p>PIMPINAN DU/DI</p>
+            <br>
+            <br>
+            <br>
+            <p><strong><u>..................................</u></strong></p>
+        </div>
+        <div class="col-sm-3 text-center">
+            <p>GURU PEMBIMBING</p>
+            <br>
+            <br>
+            <br>
+            <p><strong><u>..................................</u></strong></p>
+        </div>
+       
+    </div>
+    
+    
+</div>

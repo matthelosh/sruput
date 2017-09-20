@@ -1,0 +1,1 @@
+angular.module('geprakApp', ['geprakRoutes', 'homeCtrl', 'bamCtrl', 'dudiCtrl'])

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SOP SMKN 10 Malang</title>
+    <!-- CSS Style  -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/sotoDok.css">
+    <link rel="stylesheet" href="assets/css/bam.css">
+
+    <!-- Main Angular Script  -->
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-route.min.js"></script>
+
+    <!-- Angular Main App  -->
+    <script src="app/geprakApp.js"></script>
+
+    <!-- Geprak Router  -->
+    <script src="app/clientRoutes.js"></script>
+
+    <!-- Geprak Controller  -->
+    <script src="app/controllers/homeCtrl.js"></script>
+    <script src="app/controllers/bamCtrl.js"></script>
+    <script src="app/controllers/dudiCtrl.js"></script>
+
+    <!-- Geprak Services  -->
+
+</head>
+<body ng-app="geprakApp">
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <div class="navbar-brand">
+                    
+                    <a href="/"><i class="fa fa-coffee"></i> <span style="font-family: 'Pacifico'">Sruput</span></a>
+                </div>
+            </div>
+            <ul class="navbar-nav nav navbar-right">
+                <li><a href="/"><i class="fa fa-home"></i></a></li>
+                <li><a href="/Humas-CM-7.5-4-17-rev-0">MONITORING</a></li>
+                <li><a href="/dudi-saya">CEK DUDI SAYA</a></li>
+            </ul>
+        </div>
+    </nav>
+   
+    <div class="content" ng-view>
+        
+    </div>
+    <footer class="footer">
+        <div class="container-fluid">
+            &lt; /&gt;
+        </div>
+    </footer>
+</body>
+</html>
