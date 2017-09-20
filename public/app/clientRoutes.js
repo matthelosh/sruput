@@ -13,6 +13,10 @@ angular.module('geprakRoutes', ['ngRoute'])
             templateUrl: 'app/views/pages/dudi-saya.html',
             controller: 'dudiCtrl'
         })
+        .when('/jadwal', {
+            templateUrl: 'app/views/pages/jadwal.html'
+            // controller: 'jadwalCtrl'
+        })
         .otherwise({
             template: "<h1>Kami Tidak Menemukan Apa Yang Anda Cari</h1>"
         });
